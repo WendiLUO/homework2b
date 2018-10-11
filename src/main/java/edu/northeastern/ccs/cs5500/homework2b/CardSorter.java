@@ -1,13 +1,21 @@
 package edu.northeastern.ccs.cs5500.homework2b;
 
 import java.util.*;
-
+/* The Class CardSorter
+ * @author Wendi Luo
+ */
 public class CardSorter {
+	/* initialize two hashmaps-
+	 * faceMap: key: rank, value: the value of card
+	 * suitMap: key: symbols, values: the value of card
+	 */
 	protected static Map<String, Integer> faceMap = new HashMap<String, Integer>();
 	protected static Map<String, Integer> suitMap = new HashMap<String, Integer>();
 
 	private CardSorter() {}
-	
+	/*
+	 * populate two maps
+	 */
 	static {
 		faceMap.put("J", 11);
 		faceMap.put("Q", 12);
@@ -18,7 +26,10 @@ public class CardSorter {
 		suitMap.put("hearts", 3);
 		suitMap.put("spades", 4);
 	}
-
+	/*
+	 * class used for sorting the rank of cards using the above 
+	 * two maps
+	 */
 	private static class RankSort implements Comparator<Card> {
 		public int compare(Card c1, Card c2) {
 			int c1Val = 0;
@@ -42,7 +53,10 @@ public class CardSorter {
 		}
 
 	}
-
+	/*
+	 *  class used for sorting the suit of cards using the above 
+	 *  two maps
+	 */
 	private static class SuitSort implements Comparator<Card> {
 
 		public int compare(Card c1, Card c2) {
@@ -58,6 +72,10 @@ public class CardSorter {
 		}
 
 	}
+	/*
+	 *  class used for sorting both the suit and the rank of cards 
+	 *  using the above two maps
+	 */
 
 	private static class SuitAndRankSort implements Comparator<Card> {
 

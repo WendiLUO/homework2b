@@ -4,6 +4,7 @@ package edu.northeastern.ccs.cs5500.homework2b;
 // TODO: Auto-generated Javadoc
 /**
  * The Class Card.
+ * @author Wendi Luo
  */
 public class Card{
 	
